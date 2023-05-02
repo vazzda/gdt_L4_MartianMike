@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsk6ylpnw04sr"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_kj2ix"]
+[ext_resource type="FontFile" uid="uid://7vpyj483ftpj" path="res://assets/fonts/Kenney Pixel Square.ttf" id="2_vaydn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wjxmm"]
+font = ExtResource("2_vaydn")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kj2ix")
+
+[node name="TimeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "TIME: 9999
+"
+label_settings = SubResource("LabelSettings_wjxmm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FPS" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_bottom = 27.0
+grow_horizontal = 0
+text = "FPS: 9999
+"
+label_settings = SubResource("LabelSettings_wjxmm")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Src"
-run/main_scene="res://level.tscn"
+run/main_scene="res://scenes/start_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioPlayer="*res://scenes/audio_player.tscn"
 
 [display]
 
@@ -60,6 +64,7 @@ reset={
 2d_physics/layer_2="player"
 2d_physics/layer_3="deathzone"
 2d_physics/layer_4="traps"
+2d_physics/layer_5="exit_area"
 
 [rendering]
 

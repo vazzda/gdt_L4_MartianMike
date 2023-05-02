@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://d012v620tsnkr"]
+
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_80fp8"]
+[ext_resource type="PackedScene" uid="uid://brrl8s7hth8lu" path="res://scenes/bg.tscn" id="1_e1sl7"]
+[ext_resource type="Texture2D" uid="uid://bg7ok5w1hbs7h" path="res://assets/textures/bg/Purple.png" id="2_uonq5"]
+[ext_resource type="FontFile" uid="uid://7vpyj483ftpj" path="res://assets/fonts/Kenney Pixel Square.ttf" id="3_jqipw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dcg4f"]
+font = ExtResource("3_jqipw")
+font_size = 45
+shadow_size = 4
+shadow_color = Color(0, 0.14902, 0.360784, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80fp8")
+
+[node name="BG" parent="." instance=ExtResource("1_e1sl7")]
+bg_texture = ExtResource("2_uonq5")
+
+[node name="Martian Mike" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = 40.0
+offset_right = 68.0
+offset_bottom = 67.0
+grow_horizontal = 2
+text = "MARTIAN MIKE"
+label_settings = SubResource("LabelSettings_dcg4f")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = 6.0
+offset_right = 77.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jqipw")
+theme_override_font_sizes/font_size = 18
+text = "START"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = 59.0
+offset_right = 39.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jqipw")
+theme_override_font_sizes/font_size = 11
+text = "QUIT
+"
